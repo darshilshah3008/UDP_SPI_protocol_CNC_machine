@@ -141,6 +141,18 @@ Supports storing up to ~3 PC packets at once.
 
 ---
 
+## Continuous Integration (Jenkins)
+
+This project includes a CI pipeline built with Jenkins.
+
+- Jenkins runs inside Docker
+- ARM Cortex-M4 firmware is built using `arm-none-eabi-gcc`
+- A dedicated CI Makefile (`ci/Makefile`) is used to decouple
+  IDE-specific build artifacts from CI builds
+- Builds are automatically triggered via SCM polling
+- Build artifacts (`.elf`, `.bin`, `.map`) are archived
+
+---
 ## ✅ Conclusion
 
 This project successfully demonstrates:
